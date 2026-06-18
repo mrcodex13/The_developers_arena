@@ -1,0 +1,45 @@
+Student Grade Calculator - Test Cases
+
+Input:
+Enter student name: kartik
+Enter marks (0-100): 89
+
+Expected Output:
+📊 RESULT FOR KARTIK :
+Marks: 89/100
+Grade: B
+Message: Very Good! Keep it up! 👍
+
+Input:
+Enter student name: karan
+Enter marks (0-100): 75
+
+Expected Output:
+📊 RESULT FOR KARAN :
+Marks: 75/100
+Grade: C
+Message: Good job! You can do even better! 😊
+
+Input:
+Enter student name: raj
+Enter marks (0-100): 98
+
+Expected Output:
+📊 RESULT FOR RAJ :
+Marks: 98/100
+Grade: A
+Message: Excellent work! Keep shining! 🌟
+
+Input:
+Enter student name: aman
+Enter marks (0-100): 120
+
+Expected Output:
+❌ Marks must be between 0 and 100. Please try again.
+
+Input:
+Enter student name: rohit
+Enter marks (0-100): abc
+
+Expected Output:
+❌ Invalid input. Please enter numbers only.
