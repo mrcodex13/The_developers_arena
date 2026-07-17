@@ -1,0 +1,23 @@
+HYPOTHESIS TEST RESULTS
+==================================================
+
+T-test: MonthlyCharges (Churn=1 vs Churn=0)
+  Statistic = 2.6464
+  p-value   = 0.01008
+  Result    = SIGNIFICANT (reject H0)
+
+T-test: Total_Sales (East vs West)
+  Statistic = 2.0623
+  p-value   = 0.04548
+  Result    = SIGNIFICANT (reject H0)
+
+ANOVA: MonthlyCharges across Contract types
+  Statistic = 0.0313
+  p-value   = 0.9692
+  Result    = NOT significant (fail to reject H0)
+
+Chi-square: PaperlessBilling vs Churn
+  Statistic = 0.0465
+  p-value   = 0.8292
+  Result    = NOT significant (fail to reject H0)
+
