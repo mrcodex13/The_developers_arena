@@ -1,0 +1,4 @@
+Segment,Test_Size,Accuracy,Precision,Recall,F1_Score,ROC_AUC
+Premium Loyalists,63,0.968,0.833,0.833,0.833,0.997
+Budget Conscious,26,0.923,0.0,0.0,0.0,0.917
+New / At-Risk Customers,37,1.0,1.0,1.0,1.0,1.0
