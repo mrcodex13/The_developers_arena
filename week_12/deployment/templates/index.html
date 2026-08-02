@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #eef6ff, #d9e8ff);
+            color: #112240;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+        form {
+            display: grid;
+            gap: 14px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #b6c7e8;
+        }
+        button {
+            margin-top: 10px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 10px;
+            background: #f8fbff;
+            border: 1px solid #c8daf8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <form method="POST">
+            <div class="grid">
+                <div>
+                    <label>Tenure</label>
+                    <input type="number" name="Tenure" value="12" required>
+                </div>
+                <div>
+                    <label>Monthly Charges</label>
+                    <input type="number" name="MonthlyCharges" value="75" required>
+                </div>
+                <div>
+                    <label>Total Charges</label>
+                    <input type="number" name="TotalCharges" value="900" required>
+                </div>
+                <div>
+                    <label>Senior Citizen</label>
+                    <select name="SeniorCitizen">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Contract</label>
+                    <select name="Contract">
+                        <option value="Month-to-month">Month-to-month</option>
+                        <option value="One year">One year</option>
+                        <option value="Two year">Two year</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Payment Method</label>
+                    <select name="PaymentMethod">
+                        <option value="Electronic Check">Electronic Check</option>
+                        <option value="Mailed Check">Mailed Check</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Credit Card">Credit Card</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Paperless Billing</label>
+                    <select name="PaperlessBilling">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Predict Churn Risk</button>
+        </form>
+
+        {% if prediction is not none %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p><strong>Outcome:</strong> {{ churn_label }}</p>
+            <p><strong>Churn Probability:</strong> {{ '%.2f' % probability }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
